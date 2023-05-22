@@ -66,7 +66,7 @@ def generate_video_with_text_overlay(quote):
 
     # Overlay the text clips onto the video
     final = CompositeVideoClip([clip] + text_clips)
-    final.write_videofile("materials/final_clip.mp4")
+    final.write_videofile("output/final_clip.mp4")
 
 def calculate_fontsize(text):
     quote_length = len(text)
