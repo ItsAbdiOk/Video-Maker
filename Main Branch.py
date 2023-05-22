@@ -1,6 +1,6 @@
 from moviepy.editor import VideoFileClip, TextClip, CompositeVideoClip, CompositeAudioClip, AudioFileClip
 import requests
-import conf
+import API
 
 response = requests.get("https://stoic-quotes.com/api/quote").json()
 quote, author = response["text"], response["author"]
@@ -11,7 +11,7 @@ url = "https://api.elevenlabs.io/v1/text-to-speech/pNInz6obpgDQGcFmaJgB"
 headers = {
   "Accept": "audio/mp3",
   "Content-Type": "application/json",
-  "xi-api-key": conf.API_KEY
+  "xi-api-key": API.API_KEY
 }
 
 data = {

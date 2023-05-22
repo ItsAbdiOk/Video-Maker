@@ -4,7 +4,7 @@ import tempfile
 import speech_recognition as sr
 from pydub import AudioSegment
 from pydub.silence import split_on_silence
-import conf
+import API
 
 def create_subtitles(quote, video_duration, subtitle_duration):
     subtitle_segments = []
@@ -30,7 +30,7 @@ url = "https://api.elevenlabs.io/v1/text-to-speech/pNInz6obpgDQGcFmaJgB"
 headers = {
   "Accept": "audio/mp3",
   "Content-Type": "application/json",
-  "xi-api-key": conf.API_KEY
+  "xi-api-key": API.API_KEY
 }
 
 data = {
